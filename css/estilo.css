@@ -1,0 +1,95 @@
+#principal{
+    width: 900px;
+    height: auto; overflow: hidden;
+    border: 1px solid #000;
+    margin: auto;
+}
+
+body{
+    background-color:azure;
+}
+
+header{
+    width: 900px;
+    height: 100px;
+    border: 1px solid #000;
+    background-color: cornflowerblue;
+}
+
+.menu{
+    width: 600px;
+    height: 40px;
+    float: right;
+}
+
+
+.menu li{
+    list-style: none;  
+    float: left;
+    padding: 20px 20px;
+    border: 0px solid #000;
+    color: black;
+    
+}
+
+.menu li a{
+    text-decoration: none;
+}
+
+#img-grande{
+    margin-top: 20px;
+    width: 900;
+    height: 400,
+}
+
+#opciones{
+    width: 900 px;
+    height: auto; overflow: hidden;
+    border: 0px solid #000;
+    margin-top: 50px;
+}
+
+.primero{
+    width: 280px;
+    height: 410px;
+    border: 1px solid #000;
+    float: left;
+    padding: 5px;
+}
+.segundo{
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.mas{
+    text-decoration: none;
+    padding: 10px 20px 10px 170px;
+}
+
+#informacion{
+    width: 900px;
+    height: auto; overflow: hidden;
+    border: 1px solid #000;
+}
+
+#text{
+  width: 350px;
+  height: 300px;
+  border: 1px solid #000;
+  float: left;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+#video{
+    width: 400px;
+    height: 280px;
+    border: 1px solid #000; 
+    float: right; 
+    margin-top: 50px;
+    padding: 10px 20px 10px 20px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+

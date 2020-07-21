@@ -1,44 +1,47 @@
 #principal{
     width: 900px;
     height: auto; overflow: hidden;
-    border: 1px solid #000;
+    border: 0px solid #000;
     margin: auto;
 }
 
 body{
-    background-color:azure;
+    background-color:white;
 }
 
 header{
     width: 900px;
     height: 100px;
     border: 1px solid #000;
-    background-color: cornflowerblue;
+    background-color: black;
 }
 
 .menu{
-    width: 600px;
+    width: 900px;
     height: 40px;
     float: right;
 }
 
 
 .menu li{
-    list-style: none;  
+    list-style: none; 
+    font-size: 30px;
     float: left;
-    padding: 20px 20px;
+    padding: 20px 10px;
     border: 0px solid #000;
-    color: black;
-    
+    color: white;
+    text-decoration: none;
 }
 
-.menu li a{
-    text-decoration: none;
+a{
+    padding: 20px 0px 0px 300px;
+    font-size: 20px;
+    color: white;
 }
 
 #img-grande{
     margin-top: 20px;
-    width: 900;
+    width: 800;
     height: 400,
 }
 
@@ -46,50 +49,51 @@ header{
     width: 900 px;
     height: auto; overflow: hidden;
     border: 0px solid #000;
-    margin-top: 50px;
+    margin-top: 100px;
+}
+
+p{
+    margin: 2px;
 }
 
 .primero{
     width: 280px;
-    height: 410px;
-    border: 1px solid #000;
+    height: 420px;
+    border: 0px solid;
     float: left;
     padding: 5px;
 }
+
 .segundo{
     margin-left: 12px;
     margin-right: 12px;
 }
 
-.mas{
-    text-decoration: none;
-    padding: 10px 20px 10px 170px;
-}
 
-#informacion{
-    width: 900px;
+#travesuras{
+    width: 800px;
     height: auto; overflow: hidden;
-    border: 1px solid #000;
-}
-
-#text{
-  width: 350px;
-  height: 300px;
-  border: 1px solid #000;
-  float: left;
-  margin-top: 50px;
-  margin-left: 30px;
-  margin-right: 20px;
+    border: 0px solid #000;
 }
 
 #video{
-    width: 400px;
-    height: 280px;
-    border: 1px solid #000; 
-    float: right; 
+    width: 800px;
+    height: 480px;
+    float: left; 
     margin-top: 50px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 200px 10px 20px;
     margin-left: 30px;
-    margin-right: 20px;
+    margin-right: 50px;
+}
+
+#text{
+    padding: 10px 200px;
+}
+
+h3{
+    padding: 10px 90px;  
+}
+.contacto {
+    padding: 40px 200px;
 }
 

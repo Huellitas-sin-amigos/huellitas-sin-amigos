@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+	<link rel="stylesheet" href="./css/main.css">
+	<title>Formulario</title>
+</head>
+<body>
+  <section>	  
+    <a href="login.html" id="btn_salir">Salir</a>
+	<div class="container">
+		<div class="form__top">
+			<h2>Formulario <span>Registro</span></h2>
+		</div>		
+		<div class="form__reg" >
+			<input type="text" disabled="false" id="id">
+            <input class="input" type="text" id="nombre"  placeholder="&#128021;  nombre" required autofocus>
+			<input class="input" type="text" id="edad" placeholder="&#128021;  edad" required autofocus>
+			<input class="input" type="text" id="raza"  placeholder="&#128021;  raza" required autofocus>
+			<input class="input" type="text" id="tamaño"  placeholder="&#128021;  tamaño" required autofocus>
+			<input class="input" type="text" id="sexo"  placeholder="&#128021;  sexo" required autofocus>
+			<input class="input" type="text" id="caracter"  placeholder="&#128021;  caracter" required autofocus>
+			<input class="input" type="text" id="enfermedad"  placeholder="&#128021;  enfermedad" required autofocus>            
+		</div>
+	<div >
+		<button  onclick="agregarDatos()" class="btn__for">GUARDAR</button>   
+	</div>
+	</div>
+	<div class="col">
+		<div class="formatotop">
+			<h2>LISTADO <span>DE ANIMALES</span></h2>
+		</div>
+		<div class="table-responsive">
+	
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th scope="col">NOMBRE</th>
+						<th scope="col">EDAD</th>
+						<th scope="col">RAZA</th>
+						<th scope="col">TAMAÑO</th>
+						<th scope="col">SEXO</th>
+						<th scope="col">CARACTER</th>
+						<th scope="col">ENFERMEDAD</th>
+						<th scope="col"></th>
+					</tr>
+				</thead>
+				<tbody id="ListadoAnimales">
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+   
+
+
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+<script src="js/js.js"></script>
+</section>
+</body>
+</html>

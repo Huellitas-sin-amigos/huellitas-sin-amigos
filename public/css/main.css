@@ -16,6 +16,16 @@ body {
 	padding: 15px 25px;
 	border-radius: 5px;
 	text-decoration: none;
+	cursor: pointer;
+}
+
+.btnSubir{
+	background-color: #EFEFEF;
+	padding: .5rem;
+	margin: .5rem 0;
+	border: none;
+	border-bottom: solid #C8C8C8 .2rem;
+	transition: all .5s;
 }
 
 .container {
@@ -84,11 +94,6 @@ tr:hover td{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-}
-.actualizar{
-	border:black solid 1px;
-	width: 50%;
-	margin: 10px;
 }
 
 .btn__form {

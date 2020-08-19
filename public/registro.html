@@ -9,7 +9,8 @@
 </head>
 <body>
   <section>	  
-    <a href="login.html" id="btn_salir">Salir</a>
+	<a id="btn_salir" onclick="cerrarSesion()">Salir</a>
+	
 	<div class="container">
 		<div class="form__top">
 			<h2>Formulario <span>Registro</span></h2>
@@ -22,7 +23,10 @@
 			<input class="input" type="text" id="tamaño"  placeholder="&#128021;  tamaño" required autofocus>
 			<input class="input" type="text" id="sexo"  placeholder="&#128021;  sexo" required autofocus>
 			<input class="input" type="text" id="caracter"  placeholder="&#128021;  caracter" required autofocus>
-			<input class="input" type="text" id="enfermedad"  placeholder="&#128021;  enfermedad" required autofocus>            
+			<input class="input" type="text" id="enfermedad"  placeholder="&#128021;  enfermedad" required autofocus>
+			<input type="file" name="archivo" id="archivo">   
+			<input onclick="subirImagen()" class="btnSubir" type="button" name="bottonSubir" id="bottonSubir" value="Cargar imagen">
+	                 
 		</div>
 	<div >
 		<button  onclick="agregarDatos()" class="btn__for">GUARDAR</button>   
@@ -58,6 +62,8 @@
 
 <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-storage.js"></script>
 <script src="js/js.js"></script>
 </section>
 </body>

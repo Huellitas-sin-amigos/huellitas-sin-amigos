@@ -12,6 +12,7 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   var db = firebase.firestore();
+  var storage = firebase.storage();
   
   var idus = document.getElementById('id');
   var txtnombre = document.getElementById('nombre');
@@ -25,7 +26,8 @@
 
   var user = document.getElementById('user');
   var pass = document.getElementById('pass');
- 
+
+  var archivo = document.getElementById('archivo');    
 
 function agregarDatos(datos){
     db.collection("mascotas").add({
@@ -66,12 +68,12 @@ function leerdatos(){
                 <td>${doc.data().Caracter}</td>
                 <td>${doc.data().Enfermedad} </td>
                 <td>
-                <button onclick="eliminar('${doc.id}')" class="danger"></i>ELIMINAR</button>
-                <button id="caja"onclick="editar('${doc.id}')" class="info"></i>EDITAR</button>
-                <button id="actualizar(${doc.id})" class="actualizar" onclick="actualizar()" >ACTUALIZAR</button>
+                <button onclick="eliminar('${doc.id}')" class="danger"></i>Eliminar</button>
+                <button id="caja"onclick="editar('${doc.id}')" class="info"></i>Editar</button>
+                <button id="actualizar(${doc.id})" onclick="actualizar()" >Actualizar</button>
+                
                 </td>
-			  </tr>
-            
+			  </tr>            
             `;
         });
     })
@@ -108,7 +110,6 @@ function editar(id){
 
 }
 
-
 function actualizar(){
     db.collection("users").doc(idus.value).update({
         nombre: txtnombre.value,
@@ -126,6 +127,7 @@ function actualizar(){
             console.error("Error: ", error);
         });
 }
+
 function limpiar(){
     txtnombre.value= "";
     txtedad.value = "";
@@ -142,9 +144,31 @@ function login() {
         window.location.href = 'registro.html'
     })
     .catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // ...
-      });
+        alert('Datos incorrectos');
+    });
+}
+
+function cerrarSesion() {
+    firebase.auth().signOut()
+        .then(() => {
+            window.location.href = "login.html";
+        }).catch((error) => {
+            console.log(error.message)
+        });
+}
+
+/*archivo.addEventListener('change', (e) => {
+    var nombre = e.target.files[0].name;
+    var tmp = URL.createObjectURL(e.target.files[0]);
+    console.log("Evento: ", tmp);
+    imgArchivo.src = tmp;
+})*/
+
+function subirImagen(){
+    var archivoFile = archivo.files[0];
+    var uploadTask = storage.ref('imagenes/' + archivoFile.name).put(archivoFile) 
+
+    .then((img) => {
+        console.log('Imagen cargada ', img.totalBytes)
+    });
 }

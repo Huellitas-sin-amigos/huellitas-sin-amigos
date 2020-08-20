@@ -18,7 +18,10 @@ body {
 	text-decoration: none;
 	cursor: pointer;
 }
-
+#imagenSubida{
+	width: 30%;
+	padding: .5rem;
+}
 .btnSubir{
 	background-color: #EFEFEF;
 	padding: .5rem;
